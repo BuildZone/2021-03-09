@@ -1,0 +1,41 @@
+<!--
+<br>
+<br>
+<div class="btn-toolbar">
+<button  (click)="onSelect(pastpaper)" *ngFor="let pastpaper of pastpapers" class="btn btn-outline-primary" type="submit"><a>{{pastpaper.name}}</a></button>
+
+</div>
+-->
+
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+
+
+
+
+<th style="width:180px">Lesson </th>
+
+<th style="width:200px">Paper </th>
+
+<th style="width:200px">Delete</th>
+  </thead>
+
+
+  <tbody >
+      <tr style="width:200px" *ngFor="let pastpaper of pastpapers; let i = index">
+
+
+
+
+
+        <td  style="width:250px ;color:rgb(124, 32, 32);" ><b>{{pastpaper.name}}</b></td>
+
+
+        <td>
+          <button  (click)="onSelect(pastpaper)"  type="button" class="btn btn-primary">PAPER</button>
+        </td>
+
+        <td>
+          <button  type="button" class="btn btn-danger">Delete</button>
+        </td>

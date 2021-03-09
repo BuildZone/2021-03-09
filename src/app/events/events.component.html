@@ -1,0 +1,36 @@
+<br>
+      <div class="col-md-5 mb-4" id="searchBar" *ngIf="!_authservice.loggedIn()">
+
+
+        <form class="form-inline md-form form-sm mt-0">
+
+          <input class="form-control form-control-sm ml-3 w-50" type="text" placeholder="Search Teachers by Area" aria-label="Search"/>
+          &nbsp;&nbsp;
+          <button type="button" class="btn btn-light">
+            <span class="glyphicon glyphicon-search"></span> Search
+          </button>
+        
+
+        </form>
+      </div>
+
+
+
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let event of events">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{event.name}}</h5>
+        <p class="card-text">{{event.description}}</p>
+        <a href="#" class="btn btn-primary">Contact</a>
+      </div>
+      <div class="card-footer text-muted">
+        {{event.area}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br><br><br>
+
